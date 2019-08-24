@@ -1,14 +1,10 @@
-﻿Public Class Form1
-
-
-
+﻿Imports MySql.Data.MySqlClient
+Public Class Form1
+    Dim con As New OleDb.OleDbConnection("Provider=Microsoft.Jet.Oledb.4.0; Data Source= D:\ismae\Documents\equipos1.1.mdb")
+    Dim con_web As New OleDb.OleDbConnection("Provider=Microsoft.Jet.Oledb.4.0; Data Source= D:\ismae\Documents\equipos1.1.mdb")
+    Dim com_web As New MySqlConnection("datasource=localhost;port=3306;username=ismael;password=1234")
 
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
-
-
-        Dim con As New OleDb.OleDbConnection("Provider=Microsoft.Jet.Oledb.4.0; Data Source= D:\ismae\Documents\equipos1.1.mdb")
-        Dim con_web As New OleDb.OleDbConnection("Provider=Microsoft.Jet.Oledb.4.0; Data Source= D:\ismae\Documents\equipos1.1.mdb")
-
 
         Dim cmd1 As New OleDb.OleDbCommand
         Dim dr1 As OleDb.OleDbDataReader
@@ -112,7 +108,7 @@
             'insericion de datos
             cmd1_web.Connection = con_web
             cmd1_web.CommandType = CommandType.Text
-            cmd1_web.CommandText = "insert into mantenimiento(id_equipo,operacion,fecha_mantenimiento,M_Preventivo,M_correctivo,calibracion,estado,observaciones) values ('" & Codigo_cliente & "','" & Nombre & "','" & Nombre_comercial & "'," & Nif & "," & t_M_correctivo & "," & t_calibracion & ",'" & Estado & "',' " & obserbaciones & " ')"
+            cmd1_web.CommandText = "insert into mantenimiento(id_equipo,operacion,fecha_mantenimiento,M_Preventivo,M_correctivo,calibracion,estado,observaciones) values ('" & Codigo_cliente & "','" & Nombre & "','" & Nombre_comercial & "'," & Nif & "," & Direccion & "," & poblacion & ",'" & pais & "',' " & email & " ,'" & telefono_1 & "',' " & telefono_2 & "')"
             dr1_web = cmd1_web.ExecuteReader()
 
         End While
@@ -156,7 +152,7 @@
             'insericion de datos
             cmd2_web.Connection = con_web
             cmd2_web.CommandType = CommandType.Text
-            cmd2_web.CommandText = "insert into mantenimiento(id_equipo,operacion,fecha_mantenimiento,M_Preventivo,M_correctivo,calibracion,estado,observaciones) values ('" & selecionada_equipos & "','" & operacion & "','" & fecha_de_mantenimiento & "'," & t_M_Preventivo & "," & t_M_correctivo & "," & t_calibracion & ",'" & Estado & "',' " & obserbaciones & " ')"
+            cmd2_web.CommandText = "insert into mantenimiento(id_equipo,operacion,fecha_mantenimiento,M_Preventivo,M_correctivo,calibracion,estado,observaciones) values ('" & Muestra_Recepcion & "','" & Lote & "','" & Fecha_Recepcion & "'," & Referencia & "," & cliente & "," & quien & ",'" & prioridad & "',' " & observaciones & " ," & Cliente_facturacion & ",'" & revision & "',' " & fecha_revision & "')"
             dr2_web = cmd3_web.ExecuteReader()
 
         End While
@@ -250,5 +246,23 @@
 
         End While
 
+    End Sub
+
+    Private Sub BindingSource2_CurrentChanged(sender As Object, e As EventArgs) Handles BindingSource2.CurrentChanged
+
+    End Sub
+
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Try
+            con_web.Open()
+            MsgBox("Conexión Exitosa con la base de datos", MsgBoxStyle.Information)
+
+        Catch ex As Exception
+            MsgBox(ex.ToString)
+        End Try
     End Sub
 End Class

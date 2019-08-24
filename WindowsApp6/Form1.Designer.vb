@@ -49,9 +49,13 @@ Partial Class Form1
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Button4 = New System.Windows.Forms.Button()
+        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
         CType(Me.BindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BindingSource2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
+        '
+        'BindingSource2
+        '
         '
         'ASM
         '
@@ -82,7 +86,7 @@ Partial Class Form1
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(462, 203)
+        Me.Button2.Location = New System.Drawing.Point(473, 203)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(75, 23)
         Me.Button2.TabIndex = 3
@@ -257,11 +261,20 @@ Partial Class Form1
         Me.Button4.Text = "SINCRONIZAR AHORA"
         Me.Button4.UseVisualStyleBackColor = True
         '
+        'ComboBox2
+        '
+        Me.ComboBox2.FormattingEnabled = True
+        Me.ComboBox2.Location = New System.Drawing.Point(376, 260)
+        Me.ComboBox2.Name = "ComboBox2"
+        Me.ComboBox2.Size = New System.Drawing.Size(121, 21)
+        Me.ComboBox2.TabIndex = 24
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(605, 399)
+        Me.Controls.Add(Me.ComboBox2)
         Me.Controls.Add(Me.Button4)
         Me.Controls.Add(Me.Label12)
         Me.Controls.Add(Me.Label11)
@@ -321,4 +334,5 @@ Partial Class Form1
     Friend WithEvents Label11 As Label
     Friend WithEvents Label12 As Label
     Friend WithEvents Button4 As Button
+    Friend WithEvents ComboBox2 As ComboBox
 End Class
