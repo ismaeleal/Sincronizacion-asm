@@ -49,13 +49,17 @@ Partial Class Form1
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Button4 = New System.Windows.Forms.Button()
-        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
+        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.FontDialog1 = New System.Windows.Forms.FontDialog()
+        Me.Label13 = New System.Windows.Forms.Label()
+        Me.Label14 = New System.Windows.Forms.Label()
+        Me.Label15 = New System.Windows.Forms.Label()
+        Me.Label16 = New System.Windows.Forms.Label()
+        Me.Label17 = New System.Windows.Forms.Label()
+        Me.Label18 = New System.Windows.Forms.Label()
         CType(Me.BindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BindingSource2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'BindingSource2
-        '
         '
         'ASM
         '
@@ -69,7 +73,7 @@ Partial Class Form1
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(459, 39)
+        Me.Label2.Location = New System.Drawing.Point(459, 35)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(32, 13)
         Me.Label2.TabIndex = 1
@@ -77,7 +81,7 @@ Partial Class Form1
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(132, 203)
+        Me.Button1.Location = New System.Drawing.Point(122, 177)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 23)
         Me.Button1.TabIndex = 2
@@ -86,7 +90,7 @@ Partial Class Form1
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(473, 203)
+        Me.Button2.Location = New System.Drawing.Point(462, 177)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(75, 23)
         Me.Button2.TabIndex = 3
@@ -95,7 +99,7 @@ Partial Class Form1
         '
         'Button3
         '
-        Me.Button3.Location = New System.Drawing.Point(228, 277)
+        Me.Button3.Location = New System.Drawing.Point(291, 177)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(75, 23)
         Me.Button3.TabIndex = 4
@@ -106,55 +110,58 @@ Partial Class Form1
         '
         Me.ComboBox1.FormattingEnabled = True
         Me.ComboBox1.Items.AddRange(New Object() {"5", "10", "15", "20", "25", "30", "35", "40", "45", "50", "55", "60", "90", "120", "240"})
-        Me.ComboBox1.Location = New System.Drawing.Point(228, 353)
+        Me.ComboBox1.Location = New System.Drawing.Point(199, 234)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(121, 21)
         Me.ComboBox1.TabIndex = 5
         '
         'Label1
         '
+        Me.Label1.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(245, 303)
+        Me.Label1.Location = New System.Drawing.Point(291, 203)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(39, 13)
+        Me.Label1.Size = New System.Drawing.Size(75, 13)
         Me.Label1.TabIndex = 6
-        Me.Label1.Text = "Label1"
+        Me.Label1.Text = "No conectado"
+        Me.Label1.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
         'Label3
         '
+        Me.Label3.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(149, 187)
+        Me.Label3.Location = New System.Drawing.Point(122, 161)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(39, 13)
+        Me.Label3.Size = New System.Drawing.Size(75, 13)
         Me.Label3.TabIndex = 7
-        Me.Label3.Text = "Label3"
+        Me.Label3.Text = "No conectado"
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(491, 187)
+        Me.Label4.Location = New System.Drawing.Point(462, 161)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(39, 13)
+        Me.Label4.Size = New System.Drawing.Size(75, 13)
         Me.Label4.TabIndex = 8
-        Me.Label4.Text = "Label4"
+        Me.Label4.Text = "No conectado"
         '
         'TextBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(122, 79)
+        Me.TextBox1.Location = New System.Drawing.Point(112, 53)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(100, 20)
         Me.TextBox1.TabIndex = 9
         '
         'TextBox2
         '
-        Me.TextBox2.Location = New System.Drawing.Point(122, 115)
+        Me.TextBox2.Location = New System.Drawing.Point(112, 89)
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(100, 20)
         Me.TextBox2.TabIndex = 10
         '
         'TextBox3
         '
-        Me.TextBox3.Location = New System.Drawing.Point(122, 155)
+        Me.TextBox3.Location = New System.Drawing.Point(112, 129)
         Me.TextBox3.Name = "TextBox3"
         Me.TextBox3.Size = New System.Drawing.Size(100, 20)
         Me.TextBox3.TabIndex = 11
@@ -162,7 +169,7 @@ Partial Class Form1
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(36, 82)
+        Me.Label5.Location = New System.Drawing.Point(26, 56)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(63, 13)
         Me.Label5.TabIndex = 12
@@ -171,7 +178,7 @@ Partial Class Form1
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(36, 122)
+        Me.Label6.Location = New System.Drawing.Point(26, 96)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(56, 13)
         Me.Label6.TabIndex = 13
@@ -180,7 +187,7 @@ Partial Class Form1
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(36, 162)
+        Me.Label7.Location = New System.Drawing.Point(26, 136)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(81, 13)
         Me.Label7.TabIndex = 14
@@ -189,7 +196,7 @@ Partial Class Form1
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(376, 162)
+        Me.Label8.Location = New System.Drawing.Point(365, 136)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(81, 13)
         Me.Label8.TabIndex = 20
@@ -198,7 +205,7 @@ Partial Class Form1
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(376, 122)
+        Me.Label9.Location = New System.Drawing.Point(365, 96)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(56, 13)
         Me.Label9.TabIndex = 19
@@ -207,7 +214,7 @@ Partial Class Form1
         'Label10
         '
         Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(376, 82)
+        Me.Label10.Location = New System.Drawing.Point(365, 56)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(63, 13)
         Me.Label10.TabIndex = 18
@@ -215,21 +222,21 @@ Partial Class Form1
         '
         'TextBox4
         '
-        Me.TextBox4.Location = New System.Drawing.Point(462, 155)
+        Me.TextBox4.Location = New System.Drawing.Point(451, 129)
         Me.TextBox4.Name = "TextBox4"
         Me.TextBox4.Size = New System.Drawing.Size(100, 20)
         Me.TextBox4.TabIndex = 17
         '
         'TextBox5
         '
-        Me.TextBox5.Location = New System.Drawing.Point(462, 115)
+        Me.TextBox5.Location = New System.Drawing.Point(451, 89)
         Me.TextBox5.Name = "TextBox5"
         Me.TextBox5.Size = New System.Drawing.Size(100, 20)
         Me.TextBox5.TabIndex = 16
         '
         'TextBox6
         '
-        Me.TextBox6.Location = New System.Drawing.Point(462, 79)
+        Me.TextBox6.Location = New System.Drawing.Point(451, 53)
         Me.TextBox6.Name = "TextBox6"
         Me.TextBox6.Size = New System.Drawing.Size(100, 20)
         Me.TextBox6.TabIndex = 15
@@ -237,7 +244,7 @@ Partial Class Form1
         'Label11
         '
         Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(41, 356)
+        Me.Label11.Location = New System.Drawing.Point(12, 237)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(181, 13)
         Me.Label11.TabIndex = 21
@@ -246,7 +253,7 @@ Partial Class Form1
         'Label12
         '
         Me.Label12.AutoSize = True
-        Me.Label12.Location = New System.Drawing.Point(355, 356)
+        Me.Label12.Location = New System.Drawing.Point(326, 237)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(57, 13)
         Me.Label12.TabIndex = 22
@@ -254,27 +261,95 @@ Partial Class Form1
         '
         'Button4
         '
-        Me.Button4.Location = New System.Drawing.Point(462, 343)
+        Me.Button4.Location = New System.Drawing.Point(433, 224)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(104, 38)
         Me.Button4.TabIndex = 23
         Me.Button4.Text = "SINCRONIZAR AHORA"
         Me.Button4.UseVisualStyleBackColor = True
         '
-        'ComboBox2
+        'Timer1
         '
-        Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Location = New System.Drawing.Point(376, 260)
-        Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.Size = New System.Drawing.Size(121, 21)
-        Me.ComboBox2.TabIndex = 24
+        Me.Timer1.Enabled = True
+        Me.Timer1.Interval = 10000
+        '
+        'Label13
+        '
+        Me.Label13.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.Label13.AutoSize = True
+        Me.Label13.Location = New System.Drawing.Point(62, 276)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(45, 13)
+        Me.Label13.TabIndex = 24
+        Me.Label13.Text = "Label13"
+        Me.Label13.TextAlign = System.Drawing.ContentAlignment.TopCenter
+        '
+        'Label14
+        '
+        Me.Label14.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.Label14.AutoSize = True
+        Me.Label14.Location = New System.Drawing.Point(62, 299)
+        Me.Label14.Name = "Label14"
+        Me.Label14.Size = New System.Drawing.Size(45, 13)
+        Me.Label14.TabIndex = 25
+        Me.Label14.Text = "Label14"
+        Me.Label14.TextAlign = System.Drawing.ContentAlignment.TopCenter
+        '
+        'Label15
+        '
+        Me.Label15.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.Label15.AutoSize = True
+        Me.Label15.Location = New System.Drawing.Point(62, 326)
+        Me.Label15.Name = "Label15"
+        Me.Label15.Size = New System.Drawing.Size(45, 13)
+        Me.Label15.TabIndex = 26
+        Me.Label15.Text = "Label15"
+        Me.Label15.TextAlign = System.Drawing.ContentAlignment.TopCenter
+        '
+        'Label16
+        '
+        Me.Label16.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.Label16.AutoSize = True
+        Me.Label16.Location = New System.Drawing.Point(62, 353)
+        Me.Label16.Name = "Label16"
+        Me.Label16.Size = New System.Drawing.Size(45, 13)
+        Me.Label16.TabIndex = 27
+        Me.Label16.Text = "Label16"
+        Me.Label16.TextAlign = System.Drawing.ContentAlignment.TopCenter
+        '
+        'Label17
+        '
+        Me.Label17.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.Label17.AutoSize = True
+        Me.Label17.Location = New System.Drawing.Point(62, 377)
+        Me.Label17.Name = "Label17"
+        Me.Label17.Size = New System.Drawing.Size(45, 13)
+        Me.Label17.TabIndex = 28
+        Me.Label17.Text = "Label17"
+        Me.Label17.TextAlign = System.Drawing.ContentAlignment.TopCenter
+        '
+        'Label18
+        '
+        Me.Label18.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.Label18.AutoSize = True
+        Me.Label18.Location = New System.Drawing.Point(196, 258)
+        Me.Label18.Name = "Label18"
+        Me.Label18.Size = New System.Drawing.Size(45, 13)
+        Me.Label18.TabIndex = 29
+        Me.Label18.Text = "Label18"
+        Me.Label18.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(605, 399)
-        Me.Controls.Add(Me.ComboBox2)
+        Me.ClientSize = New System.Drawing.Size(620, 500)
+        Me.Controls.Add(Me.Label18)
+        Me.Controls.Add(Me.Label17)
+        Me.Controls.Add(Me.Label16)
+        Me.Controls.Add(Me.Label15)
+        Me.Controls.Add(Me.Label14)
+        Me.Controls.Add(Me.Label13)
         Me.Controls.Add(Me.Button4)
         Me.Controls.Add(Me.Label12)
         Me.Controls.Add(Me.Label11)
@@ -334,5 +409,12 @@ Partial Class Form1
     Friend WithEvents Label11 As Label
     Friend WithEvents Label12 As Label
     Friend WithEvents Button4 As Button
-    Friend WithEvents ComboBox2 As ComboBox
+    Friend WithEvents Timer1 As Timer
+    Friend WithEvents FontDialog1 As FontDialog
+    Friend WithEvents Label13 As Label
+    Friend WithEvents Label14 As Label
+    Friend WithEvents Label15 As Label
+    Friend WithEvents Label16 As Label
+    Friend WithEvents Label17 As Label
+    Friend WithEvents Label18 As Label
 End Class
